@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="../../lib/iframebridge.js"></script>
+</head>
+<body>
+<script>
+    (function () {
+        let frame = document.createElement("iframe");
+        document.body.appendChild(frame);
+
+        frame.onload = async function () {
+            let bridge = IframeBridge.create(frame.contentWindow);
+
+            let data = await bridge.loadContent();
+            console.log(data);
+        };
+        frame.src = "content.html";
+    })();
+</script>
+</body>
+</html>

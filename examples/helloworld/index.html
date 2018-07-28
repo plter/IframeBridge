@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="../../lib/iframebridge.js"></script>
+</head>
+<body>
+<script>
+    (function () {
+        let frame = document.createElement("iframe");
+        document.body.appendChild(frame);
+
+        frame.onload = function () {
+            let bridge = IframeBridge.create(frame.contentWindow);
+            bridge.hello("Hello iframe");
+        };
+        frame.src = "content.html";
+    })();
+</script>
+</body>
+</html>
