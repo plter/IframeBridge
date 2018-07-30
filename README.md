@@ -1,6 +1,8 @@
 # IframeBridge
 Iframe bridge
 
+视频教程 [https://yunp.top/m/course/v/1062](https://yunp.top/m/course/v/1062)
+
 IframeBridge 用于在同一个页面中的不同框架之间跨域通信。  
 
 比如主页面与嵌入的页面之间通信，方式如下：  
